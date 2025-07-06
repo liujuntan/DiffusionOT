@@ -1,10 +1,10 @@
 # **DiffusionOT** 
-![Doc/overview.jpg](https://github.com/liujuntan/DiffusionOT/blob/main/Doc/overview.jpg)
+![Doc/Overview.jpg](https://github.com/liujuntan/DiffusionOT/blob/main/Doc/Overview.jpg)
 
 
 
 
-**DiffusionOT** is a dynamic **Regularized Unbalanced Optimal Transport (RUOT)** model that reconstructs cellular trajectories and landscape from time-series scRNA-seq snapshots as well as a **Stochastic Trajectory Analysis (STA)** approach is utilized to predict cell fate decisions and estimate cell ancestry, and a **gene perturbation** method is introduced to simulate in silico gene knockouts and overexpression experiments. 
+**DiffusionOT** is a dynamic **Regularized Unbalanced Optimal Transport (RUOT)** model that reconstructs cellular trajectories and landscape from time-series scRNA-seq snapshots. Additionally, a **Stochastic Trajectory Analysis (STA)** approach is utilized to predict cell fate decisions and estimate cell ancestry. Furthermore, a **gene perturbation** method is introduced to simulate in silico gene knockouts and overexpression experiments. 
 
 
 
@@ -66,53 +66,39 @@ For generating plots to visualize results, the required packages are listed:
 
 
 
-#How to use
+# How to use
 
-##Inputs:
+## Inputs:
 
-`--dataset` Name of the dataset. Options: EMT; Mouse; Zebrafish; Spatial; MISA, default= 'MISA'. \\
-
-`--input\_dir` Input Files Directory, default='Input/'. \\
-
-`--save\_dir` Output Files Directory, default='Output/'. \\
-
-`--timepoints` Time points of data. \\
-
-`--niters` Number of traning iterations. \\
-
-`--lr` Learning rate. \\
-
-`--num\_samples` Number of sampling points per epoch. \\
-
-`--hidden\_dim` Dimension of hidden layer. \\
-
-`--n\_hiddens` Number of hidden layers for the neural network learning velocity. \\
-
-`--activation` Activation function, default= Tanh. \\
-
+`--dataset` Name of the dataset. Options: EMT; Mouse; Zebrafish; Spatial; MISA, default= 'MISA'. \
+`--input\_dir` Input Files Directory, default='Input/'. \
+`--save\_dir` Output Files Directory, default='Output/'. \
+`--timepoints` Time points of data. \
+`--niters` Number of traning iterations. \
+`--lr` Learning rate. \
+`--num\_samples` Number of sampling points per epoch. \
+`--hidden\_dim` Dimension of hidden layer. \
+`--n\_hiddens` Number of hidden layers for the neural network learning velocity. \
+`--activation` Activation function, default= Tanh. \
 `--d` Initiated diffusion coefficient, default= 0.001. 
 
 
 
 
 
-##Outputs:
+## Outputs:
 
 `ckpt.pth`: save model’s parameters and training errors.
 
-## downstream analysis
+## Downstream analysis
 
-* Cell velocity and trajectory
-
-* Iime-varying landscape
-
-* Identifying underlying GRNs and growth-related genes
-
-* Stochastic Trajectory Analysis (STA):
-  *forward process: predicting cell fate decision
-  *backward process: estimating cell ancestry
-
-* Gene perturbation analysis
+- **Cell velocity and trajectory**
+- **Time-varying landscape**
+- **Identifying underlying GRNs and growth-related genes**
+- **Stochastic Trajectory Analysis (STA)**
+  - **Forward process**: Predicting cell fate decision
+  - **Backward process**: Estimating cell ancestry
+- **Gene perturbation analysis**
 
 
 ## Examples:
@@ -131,23 +117,21 @@ A Jupyter Notebook of the step-by-step tutorial is accessible from `notebook` di
 
 ## EMT dataset
 
-Data for the single-cell lung cancer TGFB1-induced epithelial-mesenchymal transition (EMT) (raw data of `EMT.npz`)was downloaded from a Source Data file available at: \[Karacosta LG, et al. Mapping lung cancer epithelial-mesenchymal transition states and trajectories with single-cell resolution. Nat Commun 10, 5587 (2019).](https://www.nature.com/articles/s41467-019-13441-6#Sec3042)
+Data for the single-cell lung cancer TGFB1-induced epithelial-mesenchymal transition (EMT) (raw data of `EMT.npz`)was downloaded from a Source Data file available at: [Karacosta LG, et al. Mapping lung cancer epithelial-mesenchymal transition states and trajectories with single-cell resolution. Nat Commun 10, 5587 (2019).](https://www.nature.com/articles/s41467-019-13441-6#Sec3042)
 
 ## Mouse hematopoietic dataset
 
-Data for the single-cell mouse hematopoietic dataset (raw data of `Mouse.npz`) was downloaded from the NCBI Gene Expression Omnibus (GEO) under accession number GSE140802, or alternatively from:
-
-&nbsp;\[Weinreb C, Rodriguez-Fraticelli A, Camargo FD, Klein AM. Lineage tracing on transcriptional landscapes links state to fate during differentiation. Science 367, eaaw3381 (2020).](https://github.com/AllonKleinLab/paper-data/tree/master/Lineage\_tracing\_on\_transcriptional\_landscapes\_links\_state\_to\_fate\_during\_differentiation#experiment-3-in-vitro-cytokine-perturbations)
+Data for the single-cell mouse hematopoietic dataset (raw data of `Mouse.npz`) was downloaded from the NCBI Gene Expression Omnibus (GEO) under accession number GSE140802, or alternatively from: [Weinreb C, Rodriguez-Fraticelli A, Camargo FD, Klein AM. Lineage tracing on transcriptional landscapes links state to fate during differentiation. Science 367, eaaw3381 (2020).](https://github.com/AllonKleinLab/paper-data/tree/master/Lineage\_tracing\_on\_transcriptional\_landscapes\_links\_state\_to\_fate\_during\_differentiation#experiment-3-in-vitro-cytokine-perturbations)
 
 
 
-#Acknowledgments
+# Acknowledgments
 
 We thank the following projects for their great work to make our code possible: [TIGON](https://github.com/yutongo/TIGON/), [DeepRUOT](https://github.com/zhenyiizhang/DeepRUOT/). We are also grateful for the exciting work in trajectory inference, which has greatly inspired and influenced our work.
 
 
 
-#Contact information
+# Contact information
 
 
 
@@ -167,7 +151,7 @@ Qing Nie (DM, UCI) (Corresponding author)-qnie@uci.edu
 
 [1] Tong, A., Huang, J., Wolf, G., van Dijk, D., and Krishnaswamy, S. TrajectoryNet: A Dynamic Optimal Transport Network for Modeling Cellular Dynamics. In International Conference on Machine Learning, 2020. arxiv ICML
 
-#License
+# License
 
 DiffusionOT is licensed under the MIT License, and the code from TIGON used in this project is subject to the MIT License.
 ```
