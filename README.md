@@ -149,7 +149,11 @@ Qing Nie (DM, UCI) (Corresponding author)-qnie@uci.edu
 
 # Reference
 
-[1] Tong, A., Huang, J., Wolf, G., van Dijk, D., and Krishnaswamy, S. TrajectoryNet: A Dynamic Optimal Transport Network for Modeling Cellular Dynamics. In International Conference on Machine Learning, 2020. arxiv ICML
+[1] Tong, A., Huang, J., Wolf, G., van Dijk, D. & Krishnaswamy, S. TrajectoryNet: A Dynamic Optimal Transport Network for Modeling Cellular Dynamics. Proc. Mach. Learn. Res. 119, 9526–9536 (2020).
+
+[2] Sha, Y., Qiu, Y., Zhou, P. & Nie, Q. Reconstructing growth and dynamic trajectories from single-cell transcriptomics data. Nat. Mach. Intell. 6, 25–39 (2024).
+
+[3] Zhang, Z., Li, T. & Zhou, P. Learning stochastic dynamics from snapshots through regularized unbalanced optimal transport. Proc. 13th Int. Conf. Learn. Represent. (2025).
 
 # License
 
